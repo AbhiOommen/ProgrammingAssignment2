@@ -1,8 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
-
+# makeCacheMatrix takes a matrix, saved in the private variable x
+# return value of the makeCacheMatrix function is a list
+# of functions that we want to expose as public.  
+# these are accessed with the $ operator.  Any variables
+# declared inside makeVector but not exported as part of this list
+# are private...they are inaccessible to any caller of this function
 makeCacheMatrix <- function(x = matrix()) {
     inv<- NULL
     set <- function(y){
@@ -16,7 +17,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+# cacheSolve takes a caching matrix created with makeCacheMatrix and
+# return the caching vector
 
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
